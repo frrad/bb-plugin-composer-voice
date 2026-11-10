@@ -1,16 +1,16 @@
 {
-  "name": "bb-plugin-bb--composer",
-  "version": "0.1.0",
+  "name": "bb-plugin-composer-waveform",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "bb's composer: the prompt box with rich text, @-mentions, slash commands, voice and attachments.",
+  "description": "bb's composer with a rebindable voice-input shortcut: Mod+D toggles recording, Enter while recording transcribes and sends.",
   "engines": {
-    "bb": ">=0.0",
+    "bb": ">=0.49.0 <0.50.0",
     "bbPluginSdk": ">=0.6.77"
   },
   "bb": {
-    "name": "Composer",
-    "description": "bb's composer: the prompt box with rich text, @-mentions, slash commands, voice and attachments.",
+    "name": "Composer (voice shortcut)",
+    "description": "bb's composer with a rebindable voice-input shortcut: Mod+D toggles recording, Enter while recording transcribes and sends.",
     "branding": {
       "icon": "MessageSquare"
     },
@@ -64,5 +64,9 @@
     "tsrs": "0.18.0-ts7.1.0-dev.20260929",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "vitest": "^4.1.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frrad/bb-plugin-composer-voice.git"
   }
 }
