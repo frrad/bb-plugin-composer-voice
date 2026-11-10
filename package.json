@@ -1,0 +1,68 @@
+{
+  "name": "bb-plugin-bb--composer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "bb's composer: the prompt box with rich text, @-mentions, slash commands, voice and attachments.",
+  "engines": {
+    "bb": ">=0.0",
+    "bbPluginSdk": ">=0.6.77"
+  },
+  "bb": {
+    "name": "Composer",
+    "description": "bb's composer: the prompt box with rich text, @-mentions, slash commands, voice and attachments.",
+    "branding": {
+      "icon": "MessageSquare"
+    },
+    "server": "./server.ts",
+    "app": "./app.tsx"
+  },
+  "keywords": [
+    "bb-plugin"
+  ],
+  "scripts": {
+    "test": "vitest run --config vitest.config.ts",
+    "bench": "cross-env PROMPTBOX_PERF=1 vitest run --config vitest.config.ts src/editor/prompt-paste-performance.test.ts",
+    "typecheck": "tsrs --noEmit",
+    "lint": "oxlint --ignore-pattern node_modules --ignore-pattern dist ."
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.5.0",
+    "@tiptap/core": "^3.32.3",
+    "@tiptap/extension-blockquote": "^3.32.3",
+    "@tiptap/extension-document": "^3.32.3",
+    "@tiptap/extension-hard-break": "^3.32.3",
+    "@tiptap/extension-mention": "^3.32.3",
+    "@tiptap/extension-paragraph": "^3.32.3",
+    "@tiptap/extension-text": "^3.32.3",
+    "@tiptap/extensions": "^3.32.3",
+    "@tiptap/pm": "^3.32.3",
+    "@tiptap/react": "^3.32.3",
+    "@tiptap/suggestion": "^3.32.3",
+    "nanoid": "^5.1.16",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.6.132",
+    "@radix-ui/react-dropdown-menu": "^2.2.1",
+    "@radix-ui/react-tooltip": "^1.4.1",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/mdast": "^4.0.4",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cross-env": "^10.1.0",
+    "jsdom": "^29.1.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwind-merge": "^3.7.0",
+    "tsrs": "0.18.0-ts7.1.0-dev.20260929",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "vitest": "^4.1.12"
+  }
+}
