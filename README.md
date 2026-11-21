@@ -41,7 +41,7 @@ still `composer-waveform`. That keeps existing keyboard-shortcut overrides
 like `plugin:composer-waveform/start-voice-input` working; bundled plugin
 ids are reserved, so a renamed copy could not keep this one's bindings.
 
-Supports bb 0.49.x (`engines.bb` is pinned per release).
+Supports bb 0.50.x (`engines.bb` is pinned per release).
 
 ## Updating to a new bb release
 
